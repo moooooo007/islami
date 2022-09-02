@@ -13,6 +13,9 @@ class _textsplashState extends State<textsplash> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 8),(){
+      Navigator.pushNamed(context, "home" );
+    });
     return
       Container(
         width:  double.infinity,

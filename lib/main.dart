@@ -9,18 +9,17 @@ void main() {
 class Islami extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Future.delayed(Duration(seconds: 15),(){
-    //  Navigator.pushNamed(context, home.routename,arguments:textsplash() );
-    //});
+
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute:  "textsplash",
       routes: {
-        home.routename: (_) => home(),
-        textsplash.routename: (_) => textsplash(),
-        suraversedetalis.routename: (_) => suraversedetalis(),
+        "home" : (_) => home(),
+        "textsplash": (_) => textsplash(),
+        "suraversedetalis": (_) => suraversedetalis(),
       },
-      initialRoute: home.routename,
+
     );
   }
 }

@@ -16,28 +16,29 @@ List<String> suraverse =["الفاتحه","البقرة","آل عمران","ال
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      child: Column(
-      children: [
-           Image.asset("assets/images/qur2an_screen_logo.png",alignment: Alignment.topCenter,fit: BoxFit.none,),
-           Divider(thickness: 3,color: mycolor.primaryColor,),
-           Container(
-             alignment: Alignment.topCenter,
-           width: double.infinity,
-             child: Text("SuraName",style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.start,),
-           ),
-           Divider(thickness: 3,color: mycolor.primaryColor,),
-        Expanded(
-          child: ListView.separated(
-              itemBuilder: (context,index){
-                return suraname(suraverse[index],index);},
-              separatorBuilder:(context,index) {
-                return   Divider(thickness: 3,color: mycolor.primaryColor,);},
-              itemCount: suraverse.length),
-        ),
-         ]
-        ),
-    );
+    return Column(
+    children: [
+         Image.asset("assets/images/qur2an_screen_logo.png",alignment: Alignment.topCenter,fit: BoxFit.cover,
+           height: MediaQuery.of(context).size.height*.25,
+           width:MediaQuery.of(context).size.width*.3 ,
+         ),
+         Divider(thickness: 3,color: mycolor.primaryColor,),
+         Container(
+           alignment: Alignment.topCenter,
+         width: double.infinity,
+           child: Text("SuraName",
+             style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.start,),
+         ),
+         Divider(thickness: 3,color: mycolor.primaryColor,),
+      Expanded(
+        child: ListView.separated(
+            itemBuilder: (context,index){
+            return suraname(suraverse[index],index);},
+            separatorBuilder:(context,index) {
+              return   Divider(thickness: 3,color: mycolor.primaryColor,);},
+            itemCount: suraverse.length),
+      ),
+       ]
+      );
   }
 }
