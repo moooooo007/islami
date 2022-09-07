@@ -16,7 +16,8 @@ List<String> suraverse =["الفاتحه","البقرة","آل عمران","ال
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return
+      Column(
     children: [
          Image.asset("assets/images/qur2an_screen_logo.png",alignment: Alignment.topCenter,fit: BoxFit.cover,
            height: MediaQuery.of(context).size.height*.25,

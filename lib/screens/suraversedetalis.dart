@@ -18,7 +18,8 @@ class _suraversedetalisState extends State<suraversedetalis> {
   Widget build(BuildContext context) {
       var args = ModalRoute.of(context)!.settings.arguments as suradetaliargm;
       if (Sura.isEmpty) readfile(args.filename);
-      return Container(
+      return
+        Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/default_bg.png"),
