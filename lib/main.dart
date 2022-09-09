@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/screens/hadith_details.dart';
 import 'package:islami/screens/home.dart';
 import 'package:islami/screens/text_splash.dart';
 import 'package:islami/screens/suraversedetalis.dart';
@@ -15,9 +16,10 @@ class Islami extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute:  "textsplash",
       routes: {
-        "home" : (_) => home(),
-        "textsplash": (_) => textsplash(),
+        "home"            : (_) => home(),
+        "textsplash"      : (_) => textsplash(),
         "suraversedetalis": (_) => suraversedetalis(),
+        "hadithname"      : (_) => hadithname(),
       },
 
     );
